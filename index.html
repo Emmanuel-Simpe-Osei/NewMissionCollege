@@ -1,212 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- 🌍 Basic SEO Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Mission College | Excellence in Education and Character</title>
+
+    <!-- 🧠 SEO -->
     <meta
       name="description"
-      content="New Mission College in Kumasi (Pakyi No.2, Off Obuasi Road) is a leading educational institution dedicated to academic excellence, discipline, and innovation. Apply today to join our mission."
+      content="New Mission College in Kumasi (Pakyi No.2, Off Obuasi Road) is a leading educational institution dedicated to academic excellence, discipline, and innovation."
     />
     <meta
       name="keywords"
-      content="New Mission College, Kumasi, Pakyi No.2, Obuasi Road, Ghana, education, SHS, secondary school, private school, best schools in Kumasi, admission, enrollment"
+      content="New Mission College, Kumasi, Pakyi No.2, Obuasi Road, Ghana, education, SHS, private school, best schools in Kumasi, admission, enrollment"
     />
     <meta name="author" content="New Mission College Ghana" />
 
-    <!-- 📱 Mobile & Browser Compatibility -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#722F37" />
-
-    <!-- 🧭 Open Graph -->
-    <meta
-      property="og:title"
-      content="New Mission College | Excellence in Education and Character"
-    />
-    <meta
-      property="og:description"
-      content="Located in Kumasi Pakyi No.2 off Obuasi Road — empowering students through knowledge, discipline, and innovation."
-    />
-    <meta property="og:url" content="https://newmissioncollege.school/" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://newmissioncollege.school/images/img1.png"
-    />
-
-    <!-- 🐦 Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="New Mission College | Excellence in Education and Character"
-    />
-    <meta
-      name="twitter:description"
-      content="Located in Kumasi Pakyi No.2 off Obuasi Road — empowering students through knowledge, discipline, and innovation."
-    />
-    <meta
-      name="twitter:image"
-      content="https://newmissioncollege.school/images/img1.png"
-    />
-
-    <!-- 🧱 Favicon -->
-    <link
-      rel="icon"
-      href="https://newmissioncollege.school/images/logo.png"
-      type="image/png"
-    />
-
-    <!-- 🧾 Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "New Mission College",
-        "alternateName": "NMC Ghana",
-        "url": "https://newmissioncollege.school/",
-        "logo": "https://newmissioncollege.school/images/logo.png",
-        "description": "New Mission College is a mission-driven educational institution in Kumasi (Pakyi No.2, Off Obuasi Road) committed to academic excellence, discipline, and innovation.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Pakyi No.2, Off Obuasi Road",
-          "addressLocality": "Kumasi",
-          "addressRegion": "Ashanti Region",
-          "postalCode": "00233",
-          "addressCountry": "GH"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+233559145733",
-          "contactType": "Admissions Office",
-          "areaServed": "GH",
-          "availableLanguage": ["English"]
-        },
-        "sameAs": [
-          "https://www.facebook.com/",
-          "https://www.instagram.com/",
-          "https://www.twitter.com/"
-        ]
-      }
-    </script>
-
-    <!-- 🧠 Tailwind & Icons -->
+    <!-- 🧱 Tailwind + FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              wine: "#722F37",
-              piction: "#4A90E2",
-            },
-            animation: {
-              "fade-up": "fadeUp 0.8s ease-out forwards",
-              float: "float 6s ease-in-out infinite",
-            },
-            keyframes: {
-              fadeUp: {
-                "0%": { opacity: "0", transform: "translateY(30px)" },
-                "100%": { opacity: "1", transform: "translateY(0)" },
-              },
-              float: {
-                "0%,100%": { transform: "translateY(0)" },
-                "50%": { transform: "translateY(-10px)" },
-              },
-            },
-          },
-        },
-      };
-    </script>
 
-    <!-- 🌈 Styles -->
+    <!-- 🎨 Custom Styles -->
     <style>
       html {
         scroll-behavior: smooth;
       }
-      .gradient-bg {
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+
+      /* ✨ Navbar shadow and blur when scrolling */
+      .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
+
+      /* 📱 Mobile menu animation */
+      #mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.4s ease-in-out;
+      }
+      #mobile-menu.open {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* 🌈 Hero Overlay */
       .hero-overlay {
         background: linear-gradient(
           135deg,
-          rgba(114, 47, 55, 0.8),
-          rgba(74, 144, 226, 0.8)
+          rgba(114, 47, 55, 0.85),
+          rgba(74, 144, 226, 0.85)
         );
       }
-      .sticky-nav.scrolled {
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
+
       .text-shadow {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
 
-  <body class="gradient-bg text-gray-800">
+  <body class="bg-gray-50 text-gray-800">
     <!-- 🌍 Navbar -->
     <header
-      class="sticky-nav fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md"
+      id="navbar"
+      class="navbar fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300"
     >
       <nav
         class="container mx-auto flex items-center justify-between py-4 px-6"
       >
-        <!-- ✅ Logo + School Name + Motto -->
+        <!-- ✅ Logo + Name -->
         <div class="flex items-center space-x-3">
           <img
             src="./images/LOGO.png"
             alt="New Mission College Logo"
-            class="w-12 h-12 rounded-full border-2 border-piction shadow-md"
+            class="w-12 h-12 rounded-full border-2 border-blue-500 shadow-md"
           />
           <div>
-            <h1 class="text-2xl font-bold text-wine leading-tight">
+            <h1 class="text-2xl font-bold text-[#722F37] leading-tight">
               NEW MISSION COLLEGE
             </h1>
-            <p class="text-sm italic text-piction -mt-1">
+            <p class="text-sm italic text-blue-500 -mt-1">
               YOUR PASS IS OUR SUCCESS
             </p>
           </div>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- 🧭 Desktop Menu -->
         <ul class="hidden md:flex space-x-8 font-medium">
-          <li><a href="#" class="hover:text-piction">Home</a></li>
-          <li><a href="#courses" class="hover:text-piction">Courses</a></li>
-          <li><a href="#about" class="hover:text-piction">About</a></li>
-          <li><a href="#contact" class="hover:text-piction">Contact</a></li>
+          <li><a href="#" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#courses" class="hover:text-blue-500">Courses</a></li>
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
         </ul>
 
-        <!-- Apply Now -->
+        <!-- 🎓 Apply (Desktop) -->
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
           target="_blank"
-          class="hidden md:flex items-center bg-piction text-white px-5 py-2 rounded-lg shadow hover:bg-wine transition"
+          class="hidden md:flex items-center bg-blue-500 text-white px-5 py-2 rounded-lg shadow hover:bg-[#722F37] transition"
         >
           <i class="fas fa-paper-plane mr-2"></i>Apply Now
         </a>
 
-        <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-wine focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
+        <!-- 📱 Hamburger -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-[#722F37] focus:outline-none text-2xl"
+        >
+          <i class="fas fa-bars"></i>
         </button>
       </nav>
+
+      <!-- 📱 Mobile Dropdown -->
+      <div
+        id="mobile-menu"
+        class="absolute left-0 w-full bg-white/95 backdrop-blur-md shadow-md md:hidden px-6 py-5 space-y-4 text-center"
+      >
+        <a href="#" class="block text-[#722F37] font-medium hover:text-blue-500"
+          >Home</a
+        >
+        <a
+          href="#courses"
+          class="block text-[#722F37] font-medium hover:text-blue-500"
+          >Courses</a
+        >
+        <a
+          href="#about"
+          class="block text-[#722F37] font-medium hover:text-blue-500"
+          >About</a
+        >
+        <a
+          href="#contact"
+          class="block text-[#722F37] font-medium hover:text-blue-500"
+          >Contact</a
+        >
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
+          target="_blank"
+          class="block bg-blue-500 text-white text-center py-2 rounded-lg shadow hover:bg-[#722F37] transition"
+        >
+          <i class="fas fa-paper-plane mr-2"></i>Apply Now
+        </a>
+      </div>
     </header>
 
-    <!-- 🦋 Hero Section -->
+    <!-- 🦋 Hero -->
     <section
       id="hero"
-      class="h-screen bg-cover bg-center relative flex items-center justify-center text-center overflow-hidden"
+      class="h-screen bg-cover bg-center relative flex items-center justify-center text-center"
       style="background-image: url('./images/img1.png')"
     >
       <div class="hero-overlay absolute inset-0"></div>
       <div class="relative z-10 text-white px-6 max-w-4xl">
-        <h2
-          class="text-4xl md:text-6xl font-bold mb-6 text-shadow animate-fade-up"
-        >
-          <i class="fas fa-brain mr-4"></i>Building Brilliant Minds for the
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 text-shadow">
+          <i class="fas fa-brain mr-3"></i>Building Brilliant Minds for the
           Future
         </h2>
         <p class="text-xl md:text-2xl mb-6 text-shadow">
@@ -219,46 +172,39 @@
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
             target="_blank"
-            class="bg-piction hover:bg-white hover:text-piction text-white font-semibold px-8 py-4 rounded-lg shadow transition"
+            class="bg-blue-500 hover:bg-white hover:text-blue-500 text-white font-semibold px-8 py-4 rounded-lg shadow transition"
           >
             <i class="fas fa-paper-plane mr-2"></i>Apply Now
           </a>
           <a
             href="#courses"
-            class="border-2 border-white hover:bg-white hover:text-wine text-white font-semibold px-8 py-4 rounded-lg transition"
+            class="border-2 border-white hover:bg-white hover:text-[#722F37] text-white font-semibold px-8 py-4 rounded-lg transition"
           >
             <i class="fas fa-book-open mr-2"></i>Explore Courses
           </a>
         </div>
-      </div>
-      <div
-        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
-        <a href="#courses" class="text-white text-2xl"
-          ><i class="fas fa-chevron-down"></i
-        ></a>
       </div>
     </section>
 
     <!-- 📚 Courses -->
     <section id="courses" class="py-20 bg-white text-center">
       <div class="container mx-auto px-6">
-        <h3 class="text-4xl font-bold text-wine mb-8">
+        <h3 class="text-4xl font-bold text-[#722F37] mb-8">
           <i class="fas fa-book mr-3"></i>Our Courses
         </h3>
         <p class="text-gray-600 mb-10">
           We offer diverse programs designed to nurture talents and academic
           excellence.
         </p>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Example course card -->
           <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
-              class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
               <i class="fas fa-flask"></i>
             </div>
-            <h4 class="text-2xl font-bold text-piction mb-4">Science</h4>
+            <h4 class="text-2xl font-bold text-blue-500 mb-4">Science</h4>
             <ul class="text-gray-700 space-y-1 text-sm">
               <li>Physics</li>
               <li>Chemistry</li>
@@ -267,14 +213,31 @@
             </ul>
           </div>
 
-          <!-- Other courses -->
           <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
-              class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
+            >
+              <i class="fas fa-globe"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-blue-500 mb-4">General Arts</h4>
+            <ul class="text-gray-700 space-y-1 text-sm">
+              <li>Literature in English</li>
+              <li>Geography</li>
+              <li>Economics</li>
+              <li>Elective Mathematics</li>
+              <li>Christian Religion Studies</li>
+              <li>French</li>
+              <li>Government</li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
               <i class="fas fa-palette"></i>
             </div>
-            <h4 class="text-2xl font-bold text-piction mb-4">Visual Arts</h4>
+            <h4 class="text-2xl font-bold text-blue-500 mb-4">Visual Arts</h4>
             <ul class="text-gray-700 space-y-1 text-sm">
               <li>G.K.A</li>
               <li>Textiles</li>
@@ -285,11 +248,13 @@
 
           <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
-              class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
               <i class="fas fa-home"></i>
             </div>
-            <h4 class="text-2xl font-bold text-piction mb-4">Home Economics</h4>
+            <h4 class="text-2xl font-bold text-blue-500 mb-4">
+              Home Economics
+            </h4>
             <ul class="text-gray-700 space-y-1 text-sm">
               <li>Management in Living</li>
               <li>Food & Nutrition</li>
@@ -300,11 +265,11 @@
 
           <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
-              class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
               <i class="fas fa-chart-bar"></i>
             </div>
-            <h4 class="text-2xl font-bold text-piction mb-4">Business</h4>
+            <h4 class="text-2xl font-bold text-blue-500 mb-4">Business</h4>
             <ul class="text-gray-700 space-y-1 text-sm">
               <li>Business Management</li>
               <li>Accounting</li>
@@ -319,7 +284,7 @@
     <!-- 💬 About -->
     <section id="about" class="py-20 bg-gray-100 text-center">
       <div class="container mx-auto px-6">
-        <h3 class="text-4xl font-bold text-wine mb-8">
+        <h3 class="text-4xl font-bold text-[#722F37] mb-8">
           <i class="fas fa-university mr-3"></i>About NEW MISSION COLLEGE
         </h3>
         <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
@@ -335,24 +300,24 @@
     <!-- 📞 Contact -->
     <section id="contact" class="py-20 bg-white text-center">
       <div class="container mx-auto px-6">
-        <h3 class="text-4xl font-bold text-wine mb-6">
+        <h3 class="text-4xl font-bold text-[#722F37] mb-6">
           <i class="fas fa-envelope mr-3"></i>Contact Us
         </h3>
         <p class="text-gray-700 mb-4">
-          <i class="fas fa-envelope text-piction mr-2"></i>
+          <i class="fas fa-envelope text-blue-500 mr-2"></i>
           newmissioncollege.edu.gh
         </p>
         <p class="text-gray-700 mb-4">
-          <i class="fas fa-phone text-piction mr-2"></i>0559145733
+          <i class="fas fa-phone text-blue-500 mr-2"></i>0559145733
         </p>
         <p class="text-gray-700 mb-8">
-          <i class="fas fa-map-marker-alt text-piction mr-2"></i>Kumasi Pakyi
+          <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Kumasi Pakyi
           No.2 Off Obuasi Road
         </p>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
           target="_blank"
-          class="bg-wine text-white px-8 py-4 rounded-lg shadow hover:bg-piction transition"
+          class="bg-[#722F37] text-white px-8 py-4 rounded-lg shadow hover:bg-blue-500 transition"
         >
           <i class="fas fa-paper-plane mr-2"></i>Apply Now
         </a>
@@ -360,8 +325,27 @@
     </section>
 
     <!-- ⚓ Footer -->
-    <footer class="bg-wine text-white py-8 text-center">
+    <footer class="bg-[#722F37] text-white py-8 text-center">
       <p>&copy; 2025 NEW MISSION COLLEGE. All rights reserved.</p>
     </footer>
+
+    <!-- ✅ JS -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navbar = document.getElementById("navbar");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+        const icon = menuBtn.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+      });
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) navbar.classList.add("scrolled");
+        else navbar.classList.remove("scrolled");
+      });
+    </script>
   </body>
 </html>
