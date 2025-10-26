@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#722F37" />
 
-    <!-- 🧭 Open Graph (For WhatsApp, Facebook, etc.) -->
+    <!-- 🧭 Open Graph -->
     <meta
       property="og:title"
       content="New Mission College | Excellence in Education and Character"
@@ -33,7 +33,7 @@
       content="https://newmissioncollege.school/images/img1.png"
     />
 
-    <!-- 🐦 Twitter Card (For X/Twitter) -->
+    <!-- 🐦 Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -51,11 +51,11 @@
     <!-- 🧱 Favicon -->
     <link
       rel="icon"
-      href="https://newmissioncollege.school/images/img1.png"
+      href="https://newmissioncollege.school/images/logo.png"
       type="image/png"
     />
 
-    <!-- 🧾 Structured Data (JSON-LD for Google Knowledge Graph) -->
+    <!-- 🧾 Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -63,7 +63,7 @@
         "name": "New Mission College",
         "alternateName": "NMC Ghana",
         "url": "https://newmissioncollege.school/",
-        "logo": "https://newmissioncollege.school/images/img1.png",
+        "logo": "https://newmissioncollege.school/images/logo.png",
         "description": "New Mission College is a mission-driven educational institution in Kumasi (Pakyi No.2, Off Obuasi Road) committed to academic excellence, discipline, and innovation.",
         "address": {
           "@type": "PostalAddress",
@@ -88,28 +88,12 @@
       }
     </script>
 
-    <meta
-      name="description"
-      content="New Mission College in Accra, Ghana — a leading institution offering Science, Business, Visual Arts, and Home Economics programs with top WASSCE performance."
-    />
-    <meta
-      name="keywords"
-      content="New Mission College, Ghana school, WASSCE, Accra education, senior high school, remedial classes, SHS Ghana, best school in Ghana"
-    />
-    <meta name="author" content="New Mission College" />
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NEW MISSION COLLEGE | Home</title>
-
-    <!-- Icons & Tailwind -->
+    <!-- 🧠 Tailwind & Icons -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Tailwind Customization -->
     <script>
       tailwind.config = {
         theme: {
@@ -121,7 +105,6 @@
             animation: {
               "fade-up": "fadeUp 0.8s ease-out forwards",
               float: "float 6s ease-in-out infinite",
-              "bounce-gentle": "bounceGentle 2s infinite",
             },
             keyframes: {
               fadeUp: {
@@ -132,30 +115,19 @@
                 "0%,100%": { transform: "translateY(0)" },
                 "50%": { transform: "translateY(-10px)" },
               },
-              bounceGentle: {
-                "0%,100%": { transform: "translateY(0)" },
-                "50%": { transform: "translateY(-5px)" },
-              },
             },
           },
         },
       };
     </script>
 
-    <!-- Styles -->
+    <!-- 🌈 Styles -->
     <style>
       html {
         scroll-behavior: smooth;
       }
       .gradient-bg {
         background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      }
-      .card-hover {
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
       }
       .hero-overlay {
         background: linear-gradient(
@@ -164,99 +136,50 @@
           rgba(74, 144, 226, 0.8)
         );
       }
-      .text-shadow {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
       .sticky-nav.scrolled {
         background: rgba(255, 255, 255, 0.95);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
-      .mobile-menu-container {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-      }
-      .mobile-menu-container.active {
-        display: block;
-      }
-      .mobile-menu-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.6);
-      }
-      .mobile-menu {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 80%;
-        max-width: 320px;
-        background: white;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        overflow-y: auto;
-        padding: 80px 20px 20px;
-      }
-      .mobile-menu-container.active .mobile-menu {
-        transform: translateX(0);
-      }
-      .scroll-animate,
-      .scroll-animate-left,
-      .scroll-animate-right,
-      .mobile-scale,
-      .mobile-slide-up {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease-out;
-      }
-      .animated {
-        opacity: 1 !important;
-        transform: translate(0, 0) !important;
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
 
   <body class="gradient-bg text-gray-800">
-    <!-- 🌍 Navigation -->
+    <!-- 🌍 Navbar -->
     <header
       class="sticky-nav fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md"
     >
       <nav
         class="container mx-auto flex items-center justify-between py-4 px-6"
       >
-        <div class="flex items-center space-x-2">
-          <div
-            class="w-10 h-10 bg-piction rounded-full flex items-center justify-center text-white font-bold animate-bounce-gentle"
-          >
-            <i class="fas fa-graduation-cap"></i>
+        <!-- ✅ Logo + School Name + Motto -->
+        <div class="flex items-center space-x-3">
+          <img
+            src="./images/LOGO.png"
+            alt="New Mission College Logo"
+            class="w-12 h-12 rounded-full border-2 border-piction shadow-md"
+          />
+          <div>
+            <h1 class="text-2xl font-bold text-wine leading-tight">
+              NEW MISSION COLLEGE
+            </h1>
+            <p class="text-sm italic text-piction -mt-1">
+              YOUR PASS IS OUR SUCCESS
+            </p>
           </div>
-          <h1 class="text-2xl font-bold text-wine">NEW MISSION COLLEGE</h1>
         </div>
 
+        <!-- Navigation Links -->
         <ul class="hidden md:flex space-x-8 font-medium">
-          <li>
-            <a href="#" class="hover:text-piction"
-              ><i class="fas fa-home mr-2"></i>Home</a
-            >
-          </li>
-          <li>
-            <a href="#courses" class="hover:text-piction"
-              ><i class="fas fa-book mr-2"></i>Courses</a
-            >
-          </li>
-          <li>
-            <a href="#about" class="hover:text-piction"
-              ><i class="fas fa-info-circle mr-2"></i>About</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-piction"
-              ><i class="fas fa-envelope mr-2"></i>Contact</a
-            >
-          </li>
+          <li><a href="#" class="hover:text-piction">Home</a></li>
+          <li><a href="#courses" class="hover:text-piction">Courses</a></li>
+          <li><a href="#about" class="hover:text-piction">About</a></li>
+          <li><a href="#contact" class="hover:text-piction">Contact</a></li>
         </ul>
 
+        <!-- Apply Now -->
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
           target="_blank"
@@ -265,58 +188,12 @@
           <i class="fas fa-paper-plane mr-2"></i>Apply Now
         </a>
 
+        <!-- Mobile Menu Button -->
         <button id="menu-btn" class="md:hidden text-wine focus:outline-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-7 w-7"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <i class="fas fa-bars text-2xl"></i>
         </button>
       </nav>
     </header>
-
-    <!-- 📱 Mobile Menu -->
-    <div id="mobile-menu-container" class="mobile-menu-container">
-      <div class="mobile-menu-overlay"></div>
-      <div class="mobile-menu">
-        <button
-          onclick="closeMobileMenu()"
-          class="absolute top-5 right-5 text-wine text-2xl"
-        >
-          <i class="fas fa-times"></i>
-        </button>
-        <div class="flex flex-col space-y-6 mt-10">
-          <a href="#" class="hover:text-piction text-lg"
-            ><i class="fas fa-home mr-2"></i>Home</a
-          >
-          <a href="#courses" class="hover:text-piction text-lg"
-            ><i class="fas fa-book mr-2"></i>Courses</a
-          >
-          <a href="#about" class="hover:text-piction text-lg"
-            ><i class="fas fa-info-circle mr-2"></i>About</a
-          >
-          <a href="#contact" class="hover:text-piction text-lg"
-            ><i class="fas fa-envelope mr-2"></i>Contact</a
-          >
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
-            target="_blank"
-            class="bg-piction text-white px-5 py-3 rounded-lg shadow text-center hover:bg-wine transition"
-          >
-            <i class="fas fa-paper-plane mr-2"></i>Apply Now
-          </a>
-        </div>
-      </div>
-    </div>
 
     <!-- 🦋 Hero Section -->
     <section
@@ -327,17 +204,18 @@
       <div class="hero-overlay absolute inset-0"></div>
       <div class="relative z-10 text-white px-6 max-w-4xl">
         <h2
-          class="text-4xl md:text-6xl font-bold mb-6 text-shadow scroll-animate"
+          class="text-4xl md:text-6xl font-bold mb-6 text-shadow animate-fade-up"
         >
           <i class="fas fa-brain mr-4"></i>Building Brilliant Minds for the
           Future
         </h2>
-        <p class="text-xl md:text-2xl mb-8 text-shadow scroll-animate">
+        <p class="text-xl md:text-2xl mb-6 text-shadow">
+          YOUR PASS IS OUR SUCCESS
+        </p>
+        <p class="text-lg md:text-xl mb-8 text-shadow">
           Empowering students through knowledge, discipline, and innovation.
         </p>
-        <div
-          class="flex flex-col sm:flex-row justify-center gap-4 scroll-animate"
-        >
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
             target="_blank"
@@ -363,20 +241,25 @@
     </section>
 
     <!-- 📚 Courses -->
-    <section id="courses" class="py-20 bg-white">
-      <div class="container mx-auto px-6 text-center">
-        <h3 class="text-4xl font-bold text-wine mb-8 scroll-animate">
+    <section id="courses" class="py-20 bg-white text-center">
+      <div class="container mx-auto px-6">
+        <h3 class="text-4xl font-bold text-wine mb-8">
           <i class="fas fa-book mr-3"></i>Our Courses
         </h3>
+        <p class="text-gray-600 mb-10">
+          We offer diverse programs designed to nurture talents and academic
+          excellence.
+        </p>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="p-6 rounded-xl shadow-lg card-hover scroll-animate-left">
+          <!-- Example course card -->
+          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
               class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
             >
               <i class="fas fa-flask"></i>
             </div>
-            <h4 class="text-2xl font-bold text-piction mb-4">Sciences</h4>
-            <ul class="text-gray-700 space-y-2 text-sm">
+            <h4 class="text-2xl font-bold text-piction mb-4">Science</h4>
+            <ul class="text-gray-700 space-y-1 text-sm">
               <li>Physics</li>
               <li>Chemistry</li>
               <li>Biology</li>
@@ -384,53 +267,49 @@
             </ul>
           </div>
 
-          <div class="p-6 rounded-xl shadow-lg card-hover scroll-animate">
+          <!-- Other courses -->
+          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
               class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
             >
               <i class="fas fa-palette"></i>
             </div>
             <h4 class="text-2xl font-bold text-piction mb-4">Visual Arts</h4>
-            <ul class="text-gray-700 space-y-2 text-sm">
+            <ul class="text-gray-700 space-y-1 text-sm">
               <li>G.K.A</li>
               <li>Textiles</li>
-              <li>Economics</li>
               <li>Graphic Design</li>
               <li>Picture Making</li>
-              <li>Sculpture</li>
             </ul>
           </div>
 
-          <div class="p-6 rounded-xl shadow-lg card-hover scroll-animate-right">
+          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
               class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
             >
               <i class="fas fa-home"></i>
             </div>
             <h4 class="text-2xl font-bold text-piction mb-4">Home Economics</h4>
-            <ul class="text-gray-700 space-y-2 text-sm">
+            <ul class="text-gray-700 space-y-1 text-sm">
               <li>Management in Living</li>
               <li>Food & Nutrition</li>
-              <li>Electricals</li>
               <li>Biology</li>
               <li>Economics</li>
-              <li>G.K.A</li>
             </ul>
           </div>
 
-          <div class="p-6 rounded-xl shadow-lg card-hover scroll-animate-right">
+          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
             <div
               class="w-14 h-14 bg-piction/10 rounded-full flex items-center justify-center text-piction text-xl mb-4"
             >
               <i class="fas fa-chart-bar"></i>
             </div>
             <h4 class="text-2xl font-bold text-piction mb-4">Business</h4>
-            <ul class="text-gray-700 space-y-2 text-sm">
+            <ul class="text-gray-700 space-y-1 text-sm">
               <li>Business Management</li>
               <li>Accounting</li>
-              <li>Costing</li>
               <li>Economics</li>
-              <li>Elective Maths</li>
+              <li>Costing</li>
             </ul>
           </div>
         </div>
@@ -438,112 +317,25 @@
     </section>
 
     <!-- 💬 About -->
-    <!-- 💬 About -->
-    <section id="about" class="py-20 bg-gray-100">
-      <div class="container mx-auto px-6 text-center">
-        <h3 class="text-4xl font-bold text-wine mb-8 scroll-animate">
+    <section id="about" class="py-20 bg-gray-100 text-center">
+      <div class="container mx-auto px-6">
+        <h3 class="text-4xl font-bold text-wine mb-8">
           <i class="fas fa-university mr-3"></i>About NEW MISSION COLLEGE
         </h3>
-        <p
-          class="text-gray-600 max-w-3xl mx-auto scroll-animate leading-relaxed mb-12"
-        >
-          New Mission College was established as a remedial institution in 2021
-          by the proprietor, <strong>Mr. Robert</strong>, with 65 students,
-          comprising 34 boys and 31 girls. Since 2022, students have been
-          enrolling and performing greatly in academics. Admission increases
-          every year due to high academic excellence in WASSCE that the school
-          receives from WAEC.
+        <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          Founded in 2021 by <strong>Mr. Robert</strong>, New Mission College
+          began with 65 students and has grown rapidly due to its commitment to
+          academic excellence and discipline. Our motto,
+          <strong>“YOUR PASS IS OUR SUCCESS,”</strong> reflects our passion for
+          helping every student achieve their educational goals.
         </p>
-
-        <!-- 🖼️ Picture Cards (4 images) -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-          <!-- Card 1 -->
-          <div
-            class="bg-white rounded-xl shadow-lg overflow-hidden card-hover scroll-animate"
-          >
-            <img
-              src="./images/img1.png"
-              alt="Campus life"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-5">
-              <h4 class="text-xl font-bold text-wine mb-2">
-                Modern Learning Environment
-              </h4>
-              <p class="text-gray-600 text-sm">
-                Our serene campus fosters focus, creativity, and collaboration
-                among students.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="bg-white rounded-xl shadow-lg overflow-hidden card-hover scroll-animate"
-          >
-            <img
-              src="./images/img2.png"
-              alt="Students studying"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-5">
-              <h4 class="text-xl font-bold text-wine mb-2">
-                Dedicated Teachers
-              </h4>
-              <p class="text-gray-600 text-sm">
-                Experienced tutors committed to nurturing academic excellence
-                and discipline.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="bg-white rounded-xl shadow-lg overflow-hidden card-hover scroll-animate"
-          >
-            <img
-              src="./images/img6.jpg"
-              alt="College events"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-5">
-              <h4 class="text-xl font-bold text-wine mb-2">
-                Academic Excellence
-              </h4>
-              <p class="text-gray-600 text-sm">
-                Consistent top performance in WASSCE, inspiring growth and
-                confidence every year.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="bg-white rounded-xl shadow-lg overflow-hidden card-hover scroll-animate"
-          >
-            <img
-              src="./images/img7.jpg"
-              alt="Student activities"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-5">
-              <h4 class="text-xl font-bold text-wine mb-2">
-                Vibrant Student Life
-              </h4>
-              <p class="text-gray-600 text-sm">
-                Beyond books, we inspire leadership, teamwork, and social
-                responsibility.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- 📞 Contact -->
     <section id="contact" class="py-20 bg-white text-center">
       <div class="container mx-auto px-6">
-        <h3 class="text-4xl font-bold text-wine mb-6 scroll-animate">
+        <h3 class="text-4xl font-bold text-wine mb-6">
           <i class="fas fa-envelope mr-3"></i>Contact Us
         </h3>
         <p class="text-gray-700 mb-4">
@@ -561,88 +353,15 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
           target="_blank"
           class="bg-wine text-white px-8 py-4 rounded-lg shadow hover:bg-piction transition"
-          ><i class="fas fa-paper-plane mr-2"></i>Apply Now</a
         >
+          <i class="fas fa-paper-plane mr-2"></i>Apply Now
+        </a>
       </div>
-      g
     </section>
 
     <!-- ⚓ Footer -->
     <footer class="bg-wine text-white py-8 text-center">
       <p>&copy; 2025 NEW MISSION COLLEGE. All rights reserved.</p>
     </footer>
-
-    <!-- ✅ Scripts -->
-    <script>
-      // Mobile Menu
-      const menuBtn = document.getElementById("menu-btn");
-      const menuContainer = document.getElementById("mobile-menu-container");
-      const menuOverlay = document.querySelector(".mobile-menu-overlay");
-
-      menuBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const isActive = menuContainer.classList.contains("active");
-        if (isActive) closeMobileMenu();
-        else {
-          menuContainer.style.display = "block";
-          menuContainer.classList.add("active");
-          document.body.style.overflow = "hidden";
-        }
-      });
-
-      function closeMobileMenu() {
-        menuContainer.classList.remove("active");
-        document.body.style.overflow = "";
-        setTimeout(() => (menuContainer.style.display = "none"), 300);
-      }
-
-      menuOverlay.addEventListener("click", closeMobileMenu);
-      document.addEventListener(
-        "keydown",
-        (e) => e.key === "Escape" && closeMobileMenu()
-      );
-      document.addEventListener("click", (e) => {
-        if (
-          menuContainer.classList.contains("active") &&
-          !menuContainer.contains(e.target) &&
-          !menuBtn.contains(e.target)
-        )
-          closeMobileMenu();
-      });
-
-      // 🎞️ Hero Slider - Local Images
-      const hero = document.getElementById("hero");
-      const images = [
-        "./images/img1.png",
-        "./images/img2.png",
-        "./images/img3.jpg",
-      ];
-      let current = 0;
-      setInterval(() => {
-        current = (current + 1) % images.length;
-        hero.style.backgroundImage = `url(${images[current]})`;
-      }, 5000);
-
-      // Scroll Animations
-      const observer = new IntersectionObserver(
-        (entries) =>
-          entries.forEach(
-            (entry) =>
-              entry.isIntersecting && entry.target.classList.add("animated")
-          ),
-        { threshold: 0.15 }
-      );
-      document
-        .querySelectorAll(
-          ".scroll-animate, .scroll-animate-left, .scroll-animate-right, .mobile-scale, .mobile-slide-up"
-        )
-        .forEach((el) => observer.observe(el));
-
-      // Sticky nav
-      const nav = document.querySelector(".sticky-nav");
-      window.addEventListener("scroll", () =>
-        nav.classList.toggle("scrolled", window.scrollY > 50)
-      );
-    </script>
   </body>
 </html>
