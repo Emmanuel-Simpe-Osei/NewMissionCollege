@@ -29,14 +29,12 @@
         scroll-behavior: smooth;
       }
 
-      /* ✨ Navbar shadow and blur when scrolling */
       .navbar.scrolled {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
-      /* 📱 Mobile menu animation */
       #mobile-menu {
         max-height: 0;
         overflow: hidden;
@@ -50,7 +48,6 @@
         transform: translateY(0);
       }
 
-      /* 🌈 Hero Overlay */
       .hero-overlay {
         background: linear-gradient(
           135deg,
@@ -58,7 +55,6 @@
           rgba(74, 144, 226, 0.85)
         );
       }
-
       .text-shadow {
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
@@ -72,20 +68,22 @@
       class="navbar fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300"
     >
       <nav
-        class="container mx-auto flex items-center justify-between py-4 px-6"
+        class="container mx-auto flex items-center justify-between py-3 px-6"
       >
         <!-- ✅ Logo + Name -->
         <div class="flex items-center space-x-3">
           <img
             src="./images/LOGO.png"
             alt="New Mission College Logo"
-            class="w-12 h-12 rounded-full border-2 border-blue-500 shadow-md"
+            class="w-10 h-10 rounded-full border-2 border-blue-500 shadow-md object-cover"
           />
           <div>
-            <h1 class="text-2xl font-bold text-[#722F37] leading-tight">
+            <h1
+              class="text-xl md:text-2xl font-bold text-[#722F37] leading-tight"
+            >
               NEW MISSION COLLEGE
             </h1>
-            <p class="text-sm italic text-blue-500 -mt-1">
+            <p class="text-xs md:text-sm italic text-blue-500 -mt-1">
               YOUR PASS IS OUR SUCCESS
             </p>
           </div>
@@ -103,7 +101,7 @@
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScrKhMshDgsmg7DNtAvPtYF3geW4JO4Yo_ztdG0fnkhW3XEBg/viewform"
           target="_blank"
-          class="hidden md:flex items-center bg-blue-500 text-white px-5 py-2 rounded-lg shadow hover:bg-[#722F37] transition"
+          class="hidden md:flex items-center bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-[#722F37] transition"
         >
           <i class="fas fa-paper-plane mr-2"></i>Apply Now
         </a>
@@ -198,7 +196,10 @@
         </p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <!-- Science -->
+          <div
+            class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition bg-white"
+          >
             <div
               class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
@@ -213,7 +214,10 @@
             </ul>
           </div>
 
-          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <!-- General Arts -->
+          <div
+            class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition bg-white"
+          >
             <div
               class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
@@ -228,10 +232,14 @@
               <li>Christian Religion Studies</li>
               <li>French</li>
               <li>Government</li>
+              <li>Asante Twi</li>
             </ul>
           </div>
 
-          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <!-- Visual Arts -->
+          <div
+            class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition bg-white"
+          >
             <div
               class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
@@ -246,7 +254,10 @@
             </ul>
           </div>
 
-          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <!-- Home Economics -->
+          <div
+            class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition bg-white"
+          >
             <div
               class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
@@ -263,7 +274,10 @@
             </ul>
           </div>
 
-          <div class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <!-- Business (wraps to new row on lg due to 5th item) -->
+          <div
+            class="p-6 rounded-xl shadow-lg hover:-translate-y-2 transition bg-white lg:col-span-1 md:col-span-2"
+          >
             <div
               class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xl mb-4"
             >
@@ -294,6 +308,58 @@
           <strong>“YOUR PASS IS OUR SUCCESS,”</strong> reflects our passion for
           helping every student achieve their educational goals.
         </p>
+
+        <!-- 🖼️ 4 Image Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="./images/img3.jpg"
+              alt="Campus View"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-4 bg-white">
+              <h4 class="text-lg font-semibold text-[#722F37]">
+                Serene Learning Environment
+              </h4>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="./images/img2.png"
+              alt="Classroom"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-4 bg-white">
+              <h4 class="text-lg font-semibold text-[#722F37]">
+                Modern Classrooms
+              </h4>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="./images/img7.jpg"
+              alt="Students"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-4 bg-white">
+              <h4 class="text-lg font-semibold text-[#722F37]">
+                Dedicated Students
+              </h4>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="./images/img1.png"
+              alt="Extracurricular Activities"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-4 bg-white">
+              <h4 class="text-lg font-semibold text-[#722F37]">
+                Extracurricular Excellence
+              </h4>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -330,18 +396,36 @@
     </footer>
 
     <!-- ✅ JS -->
+
     <script>
       const menuBtn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
       const navbar = document.getElementById("navbar");
 
-      menuBtn.addEventListener("click", () => {
+      // ✅ Toggle open/close on hamburger tap
+      menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent window click from firing
         mobileMenu.classList.toggle("open");
         const icon = menuBtn.querySelector("i");
         icon.classList.toggle("fa-bars");
         icon.classList.toggle("fa-times");
       });
 
+      // ✅ Close menu when tapping outside
+      window.addEventListener("click", (e) => {
+        if (
+          mobileMenu.classList.contains("open") &&
+          !mobileMenu.contains(e.target) &&
+          !menuBtn.contains(e.target)
+        ) {
+          mobileMenu.classList.remove("open");
+          const icon = menuBtn.querySelector("i");
+          icon.classList.add("fa-bars");
+          icon.classList.remove("fa-times");
+        }
+      });
+
+      // ✅ Add scroll shadow to navbar
       window.addEventListener("scroll", () => {
         if (window.scrollY > 50) navbar.classList.add("scrolled");
         else navbar.classList.remove("scrolled");
